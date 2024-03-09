@@ -4,7 +4,7 @@ Setting Up and Running the Node.js REST API:
       Open a terminal or command prompt.
       Run the following command to clone the repository:
 
-    git clone https://github.com/officialbigo/dazn-assignment
+    git clone https://github.com/officialbigo/dazn-project
 
 
 Navigate to the Project Directory:
