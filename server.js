@@ -5,7 +5,7 @@ const errorHandler = require("./middleware/errorHandler");
 const app = express();
 
 connectDb();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 app.use(express.json());
 app.use(`/`, require("./routes/movieRoutes"));
 app.use(`/admin`, require("./routes/adminRoutes"));
