@@ -29,14 +29,12 @@ The server should now be running, and you should see output indicating the serve
 
 How to have access to admin permissions:
 
-  In the end-point "GET /admin/login" send a json body consisting of { "admin_name":"admin" , "password":"admin"}
-
-  Thus a jwt access token will be provided should be used in the auth header bearer token section for access to admin operations.
+  - `GET /admin/login`: with json body consisting of `{ "admin_name":"admin" , "password":"admin"}`
+  Jwt access token will be provided to be used in the auth header bearer token section for access to admin operations.
 
 How to create a new admin user:
 
-  In the "POST /admin/register" send a json body consisting of  { "admin_name":"name" , "password":"pswd"}.
-
+  - `POST /admin/register`: send a json body consisting of  `{ "admin_name":"<fill>" , "password":"<fill>"}`.
   Thus a new admin user will be created with the admin_name and password for admin access permissions.
 
 Movie lobby end pts:
@@ -49,9 +47,9 @@ Movie lobby end pts:
 
 Technologies used:
 
-  -bcrypt
-  -jsonwebtoken
-  -mongodb
+  - bcrypt
+  - jsonwebtoken
+  - mongodb
 
 Developed by-
 
