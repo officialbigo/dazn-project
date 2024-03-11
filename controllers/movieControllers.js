@@ -6,11 +6,13 @@ const getMovies = asyncHandler(async (req, res) => {
 });
 
 const searchMovies = asyncHandler(async (req, res) => {
-  const searchQuery = req.query.q;
+  const searchQuery = req.query.q.toLowerCase();
   const movies = await Movie.find({
-    $or: [{ title: searchQuery }, { genre: searchQuery }],
+    $or: [
+      { title: { $regex: new RegExp(searchQuery, "i") } },
+      { genre: { $regex: new RegExp(searchQuery, "i") } },
+    ],
   });
-
   if (movies && movies.length > 0) {
     res.status(200).json(movies);
   } else {
